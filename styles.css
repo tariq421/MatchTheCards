@@ -1,0 +1,33 @@
+body {
+  background-color: white;
+
+}
+h1 {
+  text-align: center;
+
+}
+.memory {
+  width: 800px;
+  height: 500px;
+  background-color: white;
+  margin-left: 17%;
+}
+
+.clicked{
+  width:90px;
+  height:90px;
+  margin-left: 90px;
+  display: inline-block;
+  background-color: pink;
+}
+
+.box {
+  width:90px;
+  height:90px;
+  margin-left: 90px;
+  margin-top: 8px;
+  background-image: url('http://conjuringarts.org/wp-content/uploads/2012/01/Black-and-Silver-Acorn-Card-Back.jpg');
+  display: inline-block;
+  background-size: cover;
+
+}
