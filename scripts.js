@@ -1,8 +1,6 @@
 console.log("working....");
 
-// var welcome = alert("Welcome to the best game ever, Enjoy!")
-
-
+var welcome = alert("Welcome to the best game ever, Enjoy!")
 //ceating all the cards
 // var myText = ['A','A','B', 'B','C','C','D','D','E','E','F','F','G','G','H','H','I','I','J','J']
 // $(myText).addClass("text");
@@ -40,67 +38,41 @@ function newBoard (array){
     // console.log($(".box"))
   }
 }
-
-
 function flipCard(){
   $(".box img").on("click", function(){
     $(this).css('display','none')
     $(this).parent().toggleClass("clicked")
     // $(this).toggleClass("box")
     // $(this).toggleClass("clicked")
-
-
-
     checkCard();
-
-
-    // function that will check if the flipped cards match
-
-
-})
+  // function that will check if the flipped cards match
+  })
 }
-
 function checkCard(){
   var clicked = $('.clicked');
   console.log(clicked)
   if (clicked.length == 2) {
-
-    if (clicked.eq(0).css("background-image")===clicked.eq(1).css("background-image")){
+    if(clicked.eq(0).css("background-image")===clicked.eq(1).css("background-image")){
       console.log("matched! keep playing")
       clicked.toggleClass("clicked");
       // clicked.toggleClass("matched");
       clicked.off();
     }
     else {
+      //settimeout so images can flip back if they do not match
       setTimeout(function(){
         clicked.toggleClass("clicked");
         clicked.children().css('display','block')
       }, 700)
-
     }
-
   }
-
 }
-
-
+//reset game function
 function restartGame() {
  $('#reload').click(function() {
    location.reload();
  });
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 $(document).ready(function() {
 newBoard($('.box'));
