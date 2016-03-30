@@ -1,20 +1,76 @@
-body {
-  background-color: lightblue;
+.memory {
+  width: 80%;
+  left: 10%;
+  position: relative;
+}
+.row {
+  width: 100%;
 
 }
-.container {
+.clicks {
+  margin-top:
+  width: 2px;
+  height:
+  float: left;
+  color: black;
+  font-size: 18px;
+  font-style: monospace;
   text-align: center;
+
+
+
 }
-h1 {
+body {
+  background-color: white;
+
+}
+.container {text-align: center;
+  /*border: solid black;*/
+  background-size: cover;
+  border:30px solid transparent;
+	border-image:url('http://demo.tutorialzine.com/2013/10/css3-features-you-can-finally-use/assets/img/border.png') 30 30 round;
+}
+h1 {  
   margin-left: 9%;
 }
+@-webkit-keyframes swing
+{
+   15%{-webkit-transform: translateX(5px);
+       transform: translateX(5px);}
+   30%{-webkit-transform: translateX(-5px);
+      transform: translateX(-5px);}
+   50%{-webkit-transform: translateX(3px);
+       transform: translateX(3px);}
+   65%{-webkit-transform: translateX(-3px);
+       transform: translateX(-3px);}
+   80%{-webkit-transform: translateX(2px);
+       transform: translateX(2px);}
+   100%{-webkit-transform: translateX(0);
+       transform: translateX(0);}
 }
-.memory {
-  width: 800px;
-  height: 500px;
-  background-color: white;
-  margin-left: 17%;
-  outline: dashed;
+
+@keyframes swing{
+ 15%{-webkit-transform: translateX(5px);
+       transform: translateX(5px);}
+ 30%{-webkit-transform: translateX(-5px);
+       transform: translateX(-5px);}
+ 50%{-webkit-transform: translateX(3px);
+       transform: translateX(3px);}
+ 65%{-webkit-transform: translateX(-3px);
+       transform: translateX(-3px);}
+ 80%{-webkit-transform: translateX(2px);
+       transform: translateX(2px);}
+ 100%{-webkit-transform: translateX(0);
+       transform: translateX(0);}
+}
+
+.swing:hover{
+ -webkit-animation: swing 1.2s ease;
+ animation: swing 1.2s ease;
+ -webkit-animation-iteration-count: 1;
+ animation-iteration-count: 1;
+}
+
 
 }
 
@@ -24,27 +80,32 @@ h1 {
   margin-left: 90px;
   display: inline-block;
 }
-.text {
-  opacity: 0;
-}
 
 .box {
-  width:90px;
+  position: relative;
+  width:15%;
   height:90px;
-  margin-left: 90px;
-  margin-top: 8px;
+  /*margin-left: 80px;
+  margin-top: 8px;*/
   background-image: url('http://conjuringarts.org/wp-content/uploads/2012/01/Black-and-Silver-Acorn-Card-Back.jpg');
   display: inline-block;
   background-size: cover;
   border-radius: 10px;
+  cursor: pointer;
+
 }
 
 .box img {
   width: 100%;
   height: 100%;
+  border-radius: 10%;
 }
 
 input {
-  margin-left: 52%;
-  font-size: 4em;
+  /*margin-left: 52%;
+  font-size: 4em;*/
+  display:inline-block;
+  /*line-height: 10px;
+  position: relative;*/
+
 }

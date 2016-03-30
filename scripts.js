@@ -1,6 +1,6 @@
 console.log("working....");
 
-var welcome = alert("Welcome to the best game ever, Enjoy!")
+// var welcome = alert("Welcome to the best game ever, Enjoy!")
 //ceating all the cards
 // var myText = ['A','A','B', 'B','C','C','D','D','E','E','F','F','G','G','H','H','I','I','J','J']
 // $(myText).addClass("text");
@@ -63,10 +63,34 @@ function checkCard(){
       setTimeout(function(){
         clicked.toggleClass("clicked");
         clicked.children().css('display','block')
-      }, 700)
+      }, 500)
     }
   }
 }
+
+//set amount of clicks
+function amountOfClicks (){
+$('.box').click(function() {
+  $('.click-count').html(function(i, val) { return val*1+1 });
+  });
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //reset game function
 function restartGame() {
  $('#reload').click(function() {
@@ -74,8 +98,23 @@ function restartGame() {
  });
 }
 
+function randomColor(){
+ r = Math.floor(Math.random() * (256));
+ g = Math.floor(Math.random() * (256));
+ b = Math.floor(Math.random() * (256));
+ $('.container').css('background-color','rgb('+r+','+g+','+b+')');
+} var t = setInterval(randomColor,5000);
+
+
+
+
+
 $(document).ready(function() {
 newBoard($('.box'));
 flipCard();
 restartGame();
+amountOfClicks();
+randomColor();
+
+
 });
