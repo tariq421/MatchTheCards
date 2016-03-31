@@ -76,21 +76,6 @@ $('.box').click(function() {
 };
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //reset game function
 function restartGame() {
  $('#reload').click(function() {
